@@ -149,7 +149,7 @@ def process_command(command):
     """
     if "send email" in command:
         speak("Who is the recipient?")
-        recipient = "projectcapstone95@gmail.com"
+        recipient = "reciver email adrress@gmail.com"
         if not recipient:
             speak("Could not get recipient. Please try again.")
             return
@@ -172,8 +172,8 @@ def process_command(command):
         if "yes" in confirmation:
             # IMPORTANT: Replace with your actual email and a generated App Password for security.
             # DO NOT hardcode your main email password here.
-            sender_email = "thombareshivaji071@gmail.com"
-            app_password = "qugq bggn uckl ppkb" # <<< REPLACE THIS WITH YOUR GENERATED APP PASSWORD
+            sender_email = "your email id @gmail.com"
+            app_password = "your app pass" # <<< REPLACE THIS WITH YOUR GENERATED APP PASSWORD
             if send_email(sender_email, app_password, recipient, subject, body):
                 speak("Email sent successfully!")
             else:
@@ -184,8 +184,8 @@ def process_command(command):
     elif "read emails" in command or "read inbox" in command:
         # IMPORTANT: Replace with your actual email and a generated App Password for security.
         # DO NOT hardcode your main email password here.
-        email_address = "thombareshivaji071@gmail.com"
-        app_password = "qugq bggn uckl ppkb" # <<< REPLACE THIS WITH YOUR GENERATED APP PASSWORD
+        email_address = "your email id @gmail.com"
+        app_password = "your email app pass" # <<< REPLACE THIS WITH YOUR GENERATED APP PASSWORD
         inbox = read_inbox(email_address, app_password, num_emails=2) # Read the last 2 emails
         if inbox:
             speak(f"You have {len(inbox)} recent emails.")
